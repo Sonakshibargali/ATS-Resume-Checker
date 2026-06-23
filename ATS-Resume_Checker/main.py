@@ -90,8 +90,8 @@ def ATS_Resume_Score_and_Suggestion(upload_file, job_description):
         st.markdown(response.text)
 
     except Exception:
-    st.markdown("### 📝 Analysis Report")
-    st.info("AI service temporarily unavailable. Please try again later.")
+           st.markdown("### 📝 Analysis Report")
+           st.info("AI service temporarily unavailable. Please try again later.")
 #  Run Analysis 
 if submitted and job_description and upload_file:
     with st.spinner("🔍 Analyzing your resume... Please wait."):
