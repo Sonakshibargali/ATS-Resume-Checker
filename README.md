@@ -108,7 +108,7 @@ Email: bargalisonakshi@gmai.com
 
 GitHub: https://github.com/your-github-sonakshibargali
 
-LinkedIn: Add your LinkedIn profile link
+LinkedIn: https://www.linkedin.com/in/sonakshi-bargali-63a72a353
 
 ---
 
