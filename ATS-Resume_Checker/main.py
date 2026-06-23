@@ -100,10 +100,17 @@ Avoid all general closing statements like "This will improve your chances" or "B
 {resume_data}
     """
 
+   try:
     response = client.models.generate_content(
-        model='gemini-1.5-flash',
+        model="gemini-2.0-flash",
         contents=content
     )
+
+    st.markdown("### 📝 Analysis Report")
+    st.markdown(response.text)
+
+except Exception as e:
+    st.error(f"Gemini Error: {str(e)}")
 
     st.markdown("### 📝 Analysis Report")
     st.markdown(response.candidates[0].content.parts[0].text)
