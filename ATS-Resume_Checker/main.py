@@ -100,7 +100,7 @@ Avoid all general closing statements like "This will improve your chances" or "B
 {resume_data}
     """
 
-   try:
+try:
     response = client.models.generate_content(
         model="gemini-2.0-flash",
         contents=content
