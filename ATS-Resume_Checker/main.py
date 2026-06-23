@@ -101,7 +101,7 @@ Avoid all general closing statements like "This will improve your chances" or "B
     """
 
     response = client.models.generate_content(
-        model='gemini-2.0-flash',
+        model='gemini-1.5-flash',
         contents=content
     )
 
