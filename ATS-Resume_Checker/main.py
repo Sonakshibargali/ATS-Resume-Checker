@@ -74,44 +74,38 @@ def extract_text(upload_file):
         return upload_file.read().decode("utf-8")
 
 #  Gemini Resume Analysis 
+#  Gemini Resume Analysis 
 def ATS_Resume_Score_and_Suggestion(upload_file, job_description):
     resume_data = extract_text(upload_file)
+
     content = f"""
 You are an expert in Resume Screening and ATS Optimization.
 
 Analyze the following job description and resume, and provide:
 
-1. **Match Score** (0–100): Rate how well the resume aligns with the job description.
+1. Match Score (0–100)
+2. Missing Keywords/Skills
+3. Role Alignment
+4. Suggestions for Improvement
 
-2. **Missing Keywords/Skills**: List critical skills, tools, technologies, or terms mentioned in the job description but missing in the resume.
-
-3. **Role Alignment**: Assess how well the resume reflects the responsibilities and qualifications required for the role.
-
-4. **Suggestions for Improvement**: Clearly list actionable improvements (e.g., add specific tools, mention frameworks, quantify impact, improve role relevance).
-
-Avoid all general closing statements like "This will improve your chances" or "By doing this, the candidate will be more successful." Stick strictly to the analysis.
-
----
-**Job Description**:
+Job Description:
 {job_description}
 
----
-**Resume**:
+Resume:
 {resume_data}
-    """
+"""
 
-try:
-    response = client.models.generate_content(
-        model="gemini-2.0-flash",
-        contents=content
-    )
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=content
+        )
 
-    st.markdown("### 📝 Analysis Report")
-    st.markdown(response.text)
+        st.markdown("### 📝 Analysis Report")
+        st.markdown(response.text)
 
-except Exception as e:
-    st.error(f"Gemini Error: {str(e)}")
-
+    except Exception as e:
+        st.error(f"Gemini Error: {str(e)}")
     
 
 #  Run Analysis 
