@@ -81,19 +81,7 @@ streamlit run app.py
 
 ---
 
-## Project Structure
 
-```text
-ATS-Resume-Checker/
-│
-├── app.py
-├── requirements.txt
-├── assets/
-├── utils/
-└── .streamlit/
-```
-
----
 
 ## Use Cases
 
