@@ -113,7 +113,7 @@ except Exception as e:
     st.error(f"Gemini Error: {str(e)}")
 
     st.markdown("### 📝 Analysis Report")
-    st.markdown(response.candidates[0].content.parts[0].text)
+    st.markdown(response.text)
 
 #  Run Analysis 
 if submitted and job_description and upload_file:
