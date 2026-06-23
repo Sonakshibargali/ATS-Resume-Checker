@@ -91,7 +91,7 @@ def ATS_Resume_Score_and_Suggestion(upload_file, job_description):
 
     except Exception as e:
         st.error(f"Gemini Error: {str(e)}")
-    
+        st.write("API Key Loaded:", bool(GEMINI_API_KEY))
 
 #  Run Analysis 
 if submitted and job_description and upload_file:
