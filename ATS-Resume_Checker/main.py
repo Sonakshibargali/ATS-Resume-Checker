@@ -114,3 +114,13 @@ if submitted and job_description and upload_file:
         ATS_Resume_Score_and_Suggestion(upload_file, job_description)
 elif submitted:
     st.warning("⚠️ Please make sure both Job Description and Resume are provided.")
+
+st.markdown("---")
+st.markdown("### Developer Information")
+st.write("**Sonakshi Bargali**")
+st.write("bargalisonakshi@gmail.com")
+
+st.markdown(
+    "[Built for Digital Heroes](https://digitalheroesco.com)"
+)
+
