@@ -78,22 +78,7 @@ def extract_text(upload_file):
 def ATS_Resume_Score_and_Suggestion(upload_file, job_description):
     resume_data = extract_text(upload_file)
 
-    content = f"""
-You are an expert in Resume Screening and ATS Optimization.
-
-Analyze the following job description and resume, and provide:
-
-1. Match Score (0–100)
-2. Missing Keywords/Skills
-3. Role Alignment
-4. Suggestions for Improvement
-
-Job Description:
-{job_description}
-
-Resume:
-{resume_data}
-"""
+    content = "Say hello in one sentence."
 
     try:
         response = client.models.generate_content(
